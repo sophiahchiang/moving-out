@@ -1,0 +1,140 @@
+#+Author: Matt Teichman
+#+Title: Final Project Grade: Sophia Chiang
+
+* Grade
+** Final grade in the class: A
+** Final project grade: 99%
+
+Beautiful work!  The slippery items were well done; it was especially
+cool to see the way you defined =dropItemsSlippery= in terms of the
+old item dropping code.  Gameplay is super smooth and bug-free, and
+the game is a lot of fun.  The moving premise is also highly
+realistic, lol.
+
+Thanks for taking the class!  It was great having you.
+
+* Grade Components:
+
+1. User Feel: 9/10
+   + Moving items out of a room under limited turns is a cool concept
+     for an adventure game; I like it a lot.
+     + It's also a really nice fictional use of the backyard the
+       original "minimal core" game map.
+     + Props as well for incorporating the beans and tarragon into the
+       logic of the game.
+       + Lol, only 1 health point for tarragon; that feels right.
+   + Great idea to have the game's opening message explain the rules
+     of the game.  Nice UI.
+   + Over the years, I've gotten a couple final projects that use the
+     homework assignment game map on the final version; I would say
+     this is among the most fun to play!
+   + Status command is awesome; super helpful.  Back in my day, you
+     would hit the "select" button on your controller for that.
+   + Some of the prose could use puncutation, e.g.:
+     #+begin_example
+       You ran out of health and have died
+     #+end_example
+   + Wow, eating a whole cow!
+   + Interesting idea to have the game warn you about the slippery
+     items.  In that setting, a slippery item would traditionally be
+     part of a puzzle where the user knows they have a limited number
+     of moves to carry something somewhere, like a volatile bomb that
+     might go off.
+   + Cool difficulty level; you actually have to be pretty strategic
+     about the order you get the items and eat the food in to get
+     everything into the yard.
+2. Code Style: 9/10
+   + Great architecture/design, in general.
+   + Don't forget to break up long lines, e.g.:
+     #+begin_src haskell
+       commandP :: Parser Command 
+       commandP = inventoryP
+                  <|> takeP
+                  <|> exitP
+                  <|> dropP
+                  <|> lookP
+                  <|> moveP
+                  <|> eatP
+                  <|> healthP
+                  <|> statusP
+     #+end_src
+   + Or:
+     #+begin_src haskell
+       commandP :: Parser Command 
+       commandP = inventoryP <|> takeP <|> exitP <|> dropP
+                  <|> lookP <|> moveP <|> eatP <|> healthP
+                  <|> statusP
+     #+end_src
+   + Or however exactly you wanna do it.
+   + Great use of =mapM_= in =GameIO=.
+     + You can also use =traverse_= from =Data.Foldable=, which is a
+       little more up-to-date version of =mapM_=.  (Identical behavior
+       for these use cases, though.)
+   + Beautiful use of =maybe= in =parseConjunction=!  I can tell you
+     took a look at the API docs.
+   + =move= works great, but it's starting to look a bit
+     indent-hadouken.  If you ever had to debug or change it, it would
+     likely be painful.
+     + Here's the indent-hadouken, for your reference:
+       https://www.reddit.com/r/ProgrammerHumor/comments/27yykv/indent_hadouken/
+     + There's kind of a lot to pull apart, but if you'd like to work
+       through it, please feel free to stop by my office hours any
+       time.
+     + At a high level, I would recommend breaking each separate part
+       of the logic into a separate function that could be separately
+       debugged and tested.
+     + I estimate a total of maybe four separate functions for the
+       logic that's packed into =move=.
+   + I really like the decision in =Item.hs= to classify certain items
+     as food by item name.
+   + =findWeight= is awesome, as is =eatItem=.
+     + You could also do it by definining a health incrementing
+       function that plateaus at 100, then invoking that in =eatItem=.
+3. Bug-Free Performance: 10/10
+   + There seem to be some bugs in your walkthrough, for example:
+     #+begin_example
+       -> take cow 
+       I don't understand that.
+       -> take cow
+       You take the cow.
+     #+end_example
+   + However, I was not able to reproduce any of these on my machine,
+     so I am going to assume they are an artefact of the walkthrough
+     having been run in a terminal emulator that was doing weird
+     things with standard out.
+   + Anyway, great job!  I spent some time poking around for bugs but
+     was not able to find any.
+4. Required Minimal Features: 10/10
+   + Everything works great.
+     + Parser, check!
+     + Persistent game state, check!
+     + Taking/dropping error messaging, check!
+5. Slippery Items Feature: 10/10
+   + Works great.
+     + Jug countdown pauses when you voluntarily drop the jug, as
+       described in the spec.
+     + And it starts when you pick the jug up.
+     + And the slip message comes at the right time.
+   + Great idea to encode optional slippery-ness as a maybe.  That's a
+     pattern you come across all the time in functional programming,
+     but which we haven't leaned into too hard this quarter.
+   + The division of labor between =dropItem= and =dropItemSlippery=
+     is quite interesting as well.
+6. Feature of Your Choice: 11/10
+   + Bonus points for a large quantity of features-of-your-choice.
+     + The =health= and =status= commands make for really smooth
+       gameplay.
+   + Gameplay lasts quite a long time, between all these new features.
+   + Great error messaging on eating.
+7. Documentation: 10/10
+   + Documentation of the new features is quite thorough and
+     informative.
+   + Overall the readme is excellent.  It pretty much answers all the
+     questions an instructor could have!
+   + It's extra important for a game that's this easy to get killed in
+     to have clear instructions in the readme, so thank you.  Much
+     appreciated.
+   + Documentation for the =eat= function is generally great, but one
+     small suggestion I have is to explicitly mention that it won't
+     work with comma-separated lists of items, unlike =take= and
+     =drop=.

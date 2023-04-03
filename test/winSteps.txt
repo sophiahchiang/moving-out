@@ -1,0 +1,182 @@
+Welcome to Functional Adventure! You're moving out! 
+In order to win the game, you must move every object in your home to the yard. 
+You can check your progress by typing "status". 
+Beware of slippery objects, and make sure you eat enough food to keep your health up. 
+Good luck!
+-> look
+You are in a small kitchen
+You see the following objects:
+pot
+stove
+grill
+salmon
+There are exits in the following directions:
+north
+south
+east
+-> take pot, stove, grill
+You take the pot.
+You take the stove.
+You take the grill.
+-> south
+You go south.
+-> drop pot, stove, grill
+You drop the pot.
+You drop the stove.
+You drop the grill.
+-> north
+You go north.
+-> east
+You go east.
+-> take cow 
+I don't understand that.
+-> take cow
+You take the cow.
+-> eat cow
+You eat the cow and have gained 95 health. Your health is now 100.
+-> look
+You are in a pantry
+You see the following objects:
+tarragon
+beans
+steak
+watermelon
+There are exits in the following directions:
+west
+-> take tarragon, beans, steak, watermelon
+You take the tarragon.
+You take the beans.
+You take the steak.
+You take the watermelon.
+-> west
+You go west.
+-> north
+You go north.
+-> look
+You are in the living room
+You see the following objects:
+couch
+jug
+sandbag
+orange
+There are exits in the following directions:
+north
+south
+-> north
+You go north.
+-> look
+You are in the bedroom
+You see the following objects:
+bed
+apple
+There are exits in the following directions:
+south
+-> take bed, apple
+You take the bed.
+You take the apple.
+-> health
+Your health is currently: 36
+-> south
+You go south.
+You have 3 moves remaining before the jug slips out of your inventory.
+-> look
+You are in the living room
+You see the following objects:
+couch
+jug
+sandbag
+orange
+There are exits in the following directions:
+north
+south
+-> eat apple, steak, watermelon
+You eat the apple and have gained 2 health. Your health is now 28.
+You eat the steak and have gained 5 health. Your health is now 33.
+You eat the watermelon and have gained 11 health. Your health is now 44.
+-> inventory
+You are carrying the following objects:
+bed
+beans
+tarragon
+-> eat beans, tarragon
+You eat the beans and have gained 30 health. Your health is now 74.
+You eat the tarragon and have gained 1 health. Your health is now 75.
+-> eat bed
+The bed is not edible.
+-> look
+You are in the living room
+You see the following objects:
+couch
+jug
+sandbag
+orange
+There are exits in the following directions:
+north
+south
+-> take jug, sandbag, orange
+You take the jug.
+You take the sandbag.
+You take the orange.
+-> south
+You go south.
+You have 2 moves remaining before the jug slips out of your inventory.
+-> look
+You are in a small kitchen
+You see the following objects:
+salmon
+There are exits in the following directions:
+north
+south
+east
+-> take salmon
+You take the salmon.
+-> eat salmon, orange, apple
+You eat the salmon and have gained 15 health. Your health is now 76.
+You eat the orange and have gained 3 health. Your health is now 79.
+The apple cannot be eaten because it isn't in your inventory.
+-> inventory
+You are carrying the following objects:
+sandbag
+jug
+bed
+-> south
+You go south.
+You have 1 moves remaining before the jug slips out of your inventory.
+-> look
+You are in a yard
+You see the following objects:
+grill
+stove
+pot
+There are exits in the following directions:
+north
+-> drop sandbag, jug, bed
+You drop the sandbag.
+You drop the jug.
+You drop the bed.
+-> health
+Your health is currently: 69
+-> north
+You go north.
+-> north
+You go north.
+-> look
+You are in the living room
+You see the following objects:
+couch
+There are exits in the following directions:
+north
+south
+-> take couch
+You take the couch.
+-> health
+Your health is currently: 21
+-> south
+You go south.
+-> south
+You go south.
+-> drop couch
+You drop the couch.
+You successfully brought all of the items into the yard.
+Congrats! You win!
+sophiachiang@Sophias-MacBook-Air functional-adventure-sophiahchiang % 
