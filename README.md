@@ -16,7 +16,7 @@ As a player you start out with 100 health units which will fluctuate over the co
 
 ##### Game Objective
 
-As a player, your objective is to move every object into the yard. I was inpsired by the chaos of my last couple days in Hyde Park, trying to get every You can do this by taking items and dropping items. However, given the health constraint, you must consider the order in which you enter each room, which items to pick up, and when to eat the food you have at your disposal. Once you drop all the objects into the yard, you will receive the message that you've won the game.
+As a player, your objective is to move every object into the yard. I was inpsired by the chaos of my last couple days in Hyde Park, trying to get everything I owned all packed up. You can do this by taking items and dropping items. However, given the health constraint, you must consider the order in which you enter each room, which items to pick up, and when to eat the food you have at your disposal. Once you drop all the objects into the yard, you will receive the message that you've won the game.
 
 If you are curious about how close you are along the way or have forgotten how many objects have made it into the living room at any given time, you can type "status" and the game will return the number of objects you've moved into the living room out of the total number of objects.
 
